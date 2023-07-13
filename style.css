@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+/* projede kullanılacak değişkenleri burada belirliyoruz */
+/* ileri aşamda olacak örneğin renk değişikliğinde tek bir yerden yönetmek için */
+
+:root {
+  --maincolor: #fafafa;
+  --white: #f1eeee;
+  --circle-1: #887a9c;
+  --circle-2: #4f93a6;
+  --text-1: rgba(97, 94, 94, 0.702);
+  --text-2: #a0d1df;
+}
+
+/* projedeki tüm etiketlere etki etmek için * seçicisini kullanırız*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* paddingleri witdh değerine dahil etemk için bu özellik kullanılır */
+  font-family: "Poppins", sans-serif;
+}
+
+/* header alanı başlangıç*/
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* logodaki yuvarlak */
+
+/* boyutlandırma için kulandık */
+
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* ayrı ayrı renkler değiştirmek için kullandık */
+
+.circle-1 {
+  position: absolute;
+  right: 0;
+  background-color: var(--circle-1);
+}
+
+.circle-2 {
+  position: absolute;
+  bottom: o;
+  background-color: var(--circle-2);
+}
+
+/* header alanı bitiş */
+
+/* hakkında alanı başlangıç */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  margin: 60px 0;
+}
+
+.about-picture {
+  display: flex;
+  align-items: center;
+}
+
+.about-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  transition: 0.3s;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.about-picture img:hover {
+  transform: translateY(-5px);
+}
+
+.col-1 {
+  margin-left: -15px;
+}
+.col-2,
+.col-5 {
+  margin-bottom: 90px;
+}
+
+.about-info {
+  margin: 0 50px;
+}
+
+.about-info h1,
+p {
+  text-align: center;
+}
+
+.about-info h1 {
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 0.8px;
+}
+
+.about-info p {
+  font-size: 20px;
+  color: var(--text-1);
+}
+
+.about-info a {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  display: inline-block;
+  color: var(--white);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-1 {
+  background-color: var(--text-2);
+  margin-bottom: 10px;
+}
+
+.btn-1 span {
+  background-color: transparent;
+}
+
+.btn-2 {
+  background-color: var(--circle-1);
+}
+
+/*Geçiş*/
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.way {
+  height: 40px;
+  border: 1px solid black;
+}
+
+.line-circle {
+  width: 30px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* İçerik Alanı*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 50px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 10px 5px;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info h3 {
+  font-size: 12px;
+  color: var(--circle-2);
+}
+
+/*Footer Başlangıç*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to right, transparent, rgba(0, 255, 0, 0.8)),
+    url("assets/pexels-айдана-тастамбек-15085918.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 400px;
+}
+
+footer h4,
+p {
+  color: white;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+footer h4 {
+  opacity: 0.8;
+  margin: 10px 20px;
+  letter-spacing: 1px;
+}
+
+footer p {
+  font-size: 15px;
+}
